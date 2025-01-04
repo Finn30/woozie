@@ -12,7 +12,8 @@ class RegisterScreen extends StatefulWidget {
 class _RegisterScreenState extends State<RegisterScreen> {
   bool useEmail = false;
   TextEditingController inputController = TextEditingController();
-  TextEditingController passwordController = TextEditingController();  // Password controller
+  TextEditingController passwordController =
+      TextEditingController(); // Password controller
   TextEditingController verificationCodeController = TextEditingController();
   bool isChecked = false;
   String? verificationId;
@@ -123,6 +124,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
@@ -141,7 +143,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             if (!useEmail) buildPhoneInput() else buildEmailInput(),
             const SizedBox(height: 16),
             useEmail
-                ? buildPasswordInput()  // Show password input when using email
+                ? buildPasswordInput() // Show password input when using email
                 : TextField(
                     controller: verificationCodeController,
                     decoration: InputDecoration(
