@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import '../landingpage/landing_page.dart';
+import 'package:project_fix/src/features/home%20screen/home_screen.dart';
 import 'password_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -106,7 +106,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           );
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => LandingPage()),
+            MaterialPageRoute(builder: (context) => HomeScreen()),
           );
         } else {
           ScaffoldMessenger.of(context).showSnackBar(

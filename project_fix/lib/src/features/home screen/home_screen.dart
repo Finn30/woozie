@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:project_fix/src/features/about%20us/aboutus_screen.dart';
 import 'package:project_fix/src/features/my%20profile/myprofile_screen.dart';
 
-class LandingPage extends StatelessWidget {
+class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

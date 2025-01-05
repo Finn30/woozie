@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:project_fix/src/features/landingpage/landing_page.dart';
+import 'package:project_fix/src/features/home%20screen/home_screen.dart';
 import 'package:project_fix/src/features/register/register_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -230,7 +230,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => LandingPage()),
+                                      builder: (context) => HomeScreen()),
                                 );
                               },
                               style: ElevatedButton.styleFrom(
