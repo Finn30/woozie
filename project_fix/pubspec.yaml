@@ -56,7 +56,6 @@ flutter_native_splash:
   color_dark: "#272727"
   image: assets/img/gridwiz_logo.jpg
   image_dark: assets/img/gridwiz_logo.jpg
-
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
