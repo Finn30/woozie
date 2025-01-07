@@ -1,14 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:project_fix/src/constant/image_string.dart';
 import 'package:project_fix/src/features/about%20us/aboutus_screen.dart';
+import 'package:project_fix/src/features/car%20guide/carguide_screen.dart';
+import 'package:project_fix/src/features/feedback/feedback_screen.dart';
+import 'package:project_fix/src/features/invite%20friends/invitefriens_screen.dart';
+import 'package:project_fix/src/features/language%20switch/languageswitch_screen.dart';
 import 'package:project_fix/src/features/my%20profile/myprofile_screen.dart';
+import 'package:project_fix/src/features/my%20trip/mytrip_screen.dart';
+import 'package:project_fix/src/features/my%20wallet/mywallet_screen.dart';
+import 'package:project_fix/src/features/user%20manual/usermanual_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          // title: Text('Gridwiz'),
-          ),
+        title: Text('Gridwiz'),
+      ),
       drawer: Drawer(
           child: Column(
         children: [
@@ -47,6 +56,8 @@ class HomeScreen extends StatelessWidget {
                 leading: Icon(Icons.luggage),
                 title: Text('My Trip'),
                 onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => MyTripScreen()));
                   // Navigasi ke halaman trip
                 },
               ),
@@ -54,6 +65,10 @@ class HomeScreen extends StatelessWidget {
                 leading: Icon(Icons.account_balance_wallet),
                 title: Text('My Wallet'),
                 onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => MyWalletScreen()));
                   // Navigasi ke halaman wallet
                 },
               ),
@@ -61,6 +76,10 @@ class HomeScreen extends StatelessWidget {
                 leading: Icon(Icons.menu_book),
                 title: Text('User Manual'),
                 onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => UserManualScreen()));
                   // Navigasi ke halaman user manual
                 },
               ),
@@ -68,6 +87,10 @@ class HomeScreen extends StatelessWidget {
                 leading: Icon(Icons.directions_car),
                 title: Text('Car Guide'),
                 onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => CarGuideScreen()));
                   // Navigasi ke halaman car guide
                 },
               ),
@@ -75,6 +98,10 @@ class HomeScreen extends StatelessWidget {
                 leading: Icon(Icons.share),
                 title: Text('Invite Friends'),
                 onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => InviteFriendsScreen()));
                   // Navigasi ke halaman invite friends
                 },
               ),
@@ -82,6 +109,10 @@ class HomeScreen extends StatelessWidget {
                 leading: Icon(Icons.feedback),
                 title: Text('Feedback'),
                 onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => FeedbackScreen()));
                   // Navigasi ke halaman feedback
                 },
               ),
@@ -98,6 +129,10 @@ class HomeScreen extends StatelessWidget {
                 leading: Icon(Icons.language),
                 title: Text('Language Switch'),
                 onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => LanguageSwitchScreen()));
                   // Navigasi ke halaman language switch
                 },
               ),
@@ -110,11 +145,12 @@ class HomeScreen extends StatelessWidget {
             ),
             child: Row(
               children: [
-                Image.asset(
-                  'assets/img/gridwiz_logo.jpg',
-                  width: 40,
-                  height: 40,
-                ),
+                Image(image: AssetImage(logo_Gridwiz), width: 40, height: 40),
+                // Image.asset(
+                //   'assets/img/gridwiz_logo.jpg',
+                //   width: 40,
+                //   height: 40,
+                // ),
                 SizedBox(width: 10),
                 Text(
                   'Gridwiz',
@@ -128,8 +164,12 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       )),
-      body: Center(
-        child: Text('Welcome to Landing Page'),
+      body: GoogleMap(
+        initialCameraPosition: CameraPosition(
+          target: LatLng(-5.200000, 106.816666),
+          zoom: 12.0,
+        ),
+        mapType: MapType.normal,
       ),
     );
   }

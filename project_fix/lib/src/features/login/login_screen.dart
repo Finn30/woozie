@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:project_fix/src/constant/image_string.dart';
 import 'package:project_fix/src/features/home%20screen/home_screen.dart';
 import 'package:project_fix/src/features/register/register_screen.dart';
 
@@ -42,9 +43,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          // Logo
-                          Image.asset(
-                            'assets/img/gridwiz.jpg',
+                          // Gambar
+                          Image(
+                            image: AssetImage(gambar_Gridwiz),
                             height: 200,
                           ),
                           SizedBox(height: 20),

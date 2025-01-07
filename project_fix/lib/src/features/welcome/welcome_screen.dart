@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_fix/src/constant/image_string.dart';
 import 'package:project_fix/src/features/login/login_screen.dart';
 import 'package:project_fix/src/features/register/register_screen.dart';
 
@@ -22,7 +23,7 @@ class WelcomeScreen extends StatelessWidget {
                     padding: const EdgeInsets.only(
                         top: 30.0), // Padding untuk gambar
                     child: Image(
-                      image: AssetImage("assets/img/gridwiz.jpg"),
+                      image: AssetImage(gambar_Gridwiz),
                       // height: height * 0.6,
                     ),
                   ),

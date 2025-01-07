@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project_fix/src/constant/image_string.dart';
 
 class AboutUsScreen extends StatelessWidget {
   const AboutUsScreen({super.key});
@@ -8,7 +9,7 @@ class AboutUsScreen extends StatelessWidget {
     var height = MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tentang Aplikasi'),
+        title: const Text('About Us'),
         centerTitle: true,
       ),
       body: Center(
@@ -22,8 +23,8 @@ class AboutUsScreen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.asset(
-                      'assets/img/gridwiz.jpg',
+                    Image(
+                      image: AssetImage(gambar_Gridwiz),
                       height: height * 0.2,
                       width: 300,
                     ),
